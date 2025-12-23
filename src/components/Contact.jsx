@@ -59,14 +59,14 @@ export default function Contact() {
                             Email:
                         </span>{" "}
                         <a
-                            href="mailto:pushkarmeghwanshi2003@gmail.com"
+                            href="mailto:meghbheru71@gmail.com"
                             className="
                                 text-indigo-600 dark:text-indigo-400
                                 hover:underline
                                 transition-colors duration-200
                             "
                         >
-                            pushkarmeghwanshi2003@gmail.com
+                            meghbheru71@gmail.com
                         </a>
                     </p>
 

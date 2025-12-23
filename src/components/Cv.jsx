@@ -24,12 +24,12 @@ export default function CV() {
                     </p>
 
                     <p className="text-sm text-slate-500 dark:text-slate-400">
-                        Udaipur, Rajasthan · +91 7728055492 · pushkarmeghwanshi2003@gmail.com
+                        Udaipur, Rajasthan · +91 7728055492 · meghbheru71@gmail.com
                     </p>
 
                     <div className="flex justify-center gap-4 text-sm">
                         <a
-                            href="https://github.com/pushmegh"
+                            href="https://github.com/BheruLalM"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-indigo-600 dark:text-indigo-400 hover:underline transition"
