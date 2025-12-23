@@ -1,16 +1,40 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built to showcase my work,
+skills, and approach to software engineering.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
+- **Frontend:** React, Vite
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Routing:** React Router
+- **Deployment:** Vercel
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- Clean and responsive UI
+- Smooth animations and transitions
+- Dedicated pages for Projects, Services, Contact, and CV
+- Interactive virtual CV with PDF preview & download
+- Dark mode support
 
-## React Compiler
+## 🧠 Focus Areas
+- Backend-focused full stack development
+- System design thinking
+- Clean architecture and scalability awareness
+- Continuous learning through hands-on projects
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌐 Live Demo
+👉 https://your-portfolio.vercel.app
 
-## Expanding the ESLint configuration
+## 📄 CV
+The website includes a virtual CV section and an option to view/download
+the original PDF resume.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📬 Contact
+- **Email:** pushkarmeghwanshi2003@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/bheru-lal-meghwal-a667a937b
+- **GitHub:** https://github.com/pushmegh
+
+---
+
+⭐ If you like this project, feel free to star the repository!
