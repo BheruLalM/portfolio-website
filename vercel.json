@@ -1,6 +1,10 @@
 {
     "routes": [
         {
+            "src": "/Bheru_cv.pdf",
+            "dest": "/Bheru_cv.pdf"
+        },
+        {
             "src": "/assets/(.*)",
             "dest": "/assets/$1"
         },
