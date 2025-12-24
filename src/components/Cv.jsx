@@ -5,14 +5,24 @@ export default function CV() {
     const [showCV, setShowCV] = useState(false);
 
     return (
-        <section className="py-24 px-6 bg-white dark:bg-slate-950 transition-colors duration-500">
+        <section
+            className="
+        min-h-screen
+        flex items-center
+        px-6
+        bg-transparent
+      "
+        >
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="max-w-5xl mx-auto space-y-16"
+                className="
+          max-w-5xl mx-auto w-full
+          py-20 md:py-28
+          space-y-16
+        "
             >
-
                 <div className="text-center space-y-3">
                     <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
                         Bheru Lal Meghwal
@@ -47,7 +57,6 @@ export default function CV() {
                     </div>
                 </div>
 
-
                 <div className="max-w-3xl mx-auto text-center">
                     <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                         Backend-focused Software Engineer and MCA student with a strong
@@ -57,7 +66,6 @@ export default function CV() {
                         data flow, and scalability.
                     </p>
                 </div>
-
 
                 <div className="grid md:grid-cols-2 gap-8">
                     {[
@@ -75,16 +83,26 @@ export default function CV() {
                         },
                         {
                             title: "Tools & Technologies",
-                            items: ["Git & GitHub", "REST APIs", "Docker", "Postman", "VS Code"],
+                            items: [
+                                "Git & GitHub",
+                                "REST APIs",
+                                "Docker",
+                                "Postman",
+                                "VS Code",
+                            ],
                         },
                     ].map((group) => (
                         <div
                             key={group.title}
-                            className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 p-6"
+                            className="
+                rounded-xl
+                border border-slate-200 dark:border-slate-800
+                bg-slate-50/80 dark:bg-slate-900/80
+                backdrop-blur
+                p-6
+              "
                         >
-                            <h3 className="font-semibold mb-3">
-                                {group.title}
-                            </h3>
+                            <h3 className="font-semibold mb-3">{group.title}</h3>
                             <ul className="space-y-1 text-sm text-slate-600 dark:text-slate-400">
                                 {group.items.map((item) => (
                                     <li key={item}>• {item}</li>
@@ -93,7 +111,6 @@ export default function CV() {
                         </div>
                     ))}
                 </div>
-
 
                 <div className="space-y-8">
                     <h2 className="text-2xl font-bold">Projects</h2>
@@ -113,7 +130,6 @@ export default function CV() {
                         </div>
 
                         <div>
-                            a
                             <h3 className="font-semibold">FilmiWorld</h3>
                             <p className="text-sm text-slate-500 mb-2">
                                 React · Express.js · MongoDB
@@ -127,12 +143,13 @@ export default function CV() {
                     </div>
                 </div>
 
-
                 <div className="space-y-4">
                     <h2 className="text-2xl font-bold">Education</h2>
 
                     <div>
-                        <p className="font-medium">Master of Computer Applications (MCA)</p>
+                        <p className="font-medium">
+                            Master of Computer Applications (MCA)
+                        </p>
                         <p className="text-sm text-slate-600 dark:text-slate-400">
                             Mohanlal Sukhadia University, Udaipur · 2024–2026 · CGPA: 7.5
                         </p>
@@ -148,7 +165,6 @@ export default function CV() {
                     </div>
                 </div>
 
-
                 <div>
                     <h2 className="text-2xl font-bold mb-3">
                         Certifications & Participation
@@ -159,7 +175,6 @@ export default function CV() {
                         <li>iOS App Development – Training participation</li>
                     </ul>
                 </div>
-
 
                 <div className="pt-10 border-t border-slate-200 dark:border-slate-800 space-y-6">
                     <div className="flex flex-col sm:flex-row justify-center gap-4">

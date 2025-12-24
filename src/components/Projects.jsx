@@ -15,9 +15,21 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section className="py-28 px-6 bg-white dark:bg-slate-950 transition-colors duration-500">
-            <div className="max-w-5xl mx-auto space-y-12">
-                {/* Heading */}
+        <section
+            className="
+        min-h-screen
+        flex items-center
+        px-6
+        bg-transparent
+      "
+        >
+            <div
+                className="
+          max-w-5xl mx-auto w-full
+          py-20 md:py-28
+          space-y-12
+        "
+            >
                 <div>
                     <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 mb-3">
                         Projects
@@ -28,7 +40,6 @@ export default function Projects() {
                     </p>
                 </div>
 
-                {/* Projects List */}
                 <div className="grid gap-6">
                     {projects.map((p, i) => (
                         <motion.div
@@ -42,16 +53,16 @@ export default function Projects() {
                             }}
                             viewport={{ once: true }}
                             className="
-                                group relative
-                                border border-slate-200 dark:border-slate-800
-                                bg-white dark:bg-slate-900
-                                rounded-2xl p-7
-                                transition-all duration-300
-                                hover:-translate-y-1
-                                hover:shadow-xl hover:shadow-indigo-500/10
-                            "
+                group relative
+                border border-slate-200 dark:border-slate-800
+                bg-slate-50/80 dark:bg-slate-900/80
+                backdrop-blur
+                rounded-2xl p-7
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:shadow-xl hover:shadow-indigo-500/10
+              "
                         >
-                            {/* Index + Status */}
                             <div className="flex items-center justify-between">
                                 <span className="text-sm font-semibold tracking-widest text-indigo-600 dark:text-indigo-400">
                                     {String(i + 1).padStart(2, "0")}
@@ -62,23 +73,20 @@ export default function Projects() {
                                 </span>
                             </div>
 
-                            {/* Title */}
                             <h3 className="text-xl font-semibold mt-3 text-slate-900 dark:text-slate-100">
                                 {p.name}
                             </h3>
 
-                            {/* Description */}
                             <p className="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
                                 {p.desc}
                             </p>
 
-                            {/* Progress Indicator */}
                             <div
                                 className="
-                                    mt-6 flex items-center gap-2
-                                    text-sm font-medium
-                                    text-indigo-600 dark:text-indigo-400
-                                "
+                  mt-6 flex items-center gap-2
+                  text-sm font-medium
+                  text-indigo-600 dark:text-indigo-400
+                "
                             >
                                 <span className="relative flex h-2 w-2">
                                     <span className="absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75 animate-ping"></span>
@@ -90,7 +98,6 @@ export default function Projects() {
                     ))}
                 </div>
 
-                {/* Closing Line */}
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

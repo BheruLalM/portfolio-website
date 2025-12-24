@@ -2,13 +2,24 @@ import { motion } from "framer-motion";
 
 export default function About() {
     return (
-        <section className="py-28 px-6 bg-white dark:bg-slate-950 transition-colors duration-500">
+        <section
+            className="
+        min-h-screen
+        flex items-center
+        px-6
+        bg-transparent
+      "
+        >
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="max-w-4xl mx-auto space-y-10"
+                className="
+          max-w-4xl mx-auto w-full
+          py-20 md:py-28
+          space-y-10
+        "
             >
                 {/* Heading */}
                 <div>
@@ -82,19 +93,20 @@ export default function About() {
                         <div
                             key={item.title}
                             className="
-                                rounded-xl
-                                border border-slate-200 dark:border-slate-800
-                                bg-slate-50 dark:bg-slate-900
-                                p-5
-                                transition-all duration-300
-                                hover:-translate-y-1
-                                hover:shadow-md hover:shadow-indigo-500/10
-                            "
+                rounded-xl
+                border border-slate-200 dark:border-slate-800
+                bg-slate-50/80 dark:bg-slate-900/80
+                backdrop-blur
+                p-5
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:shadow-md hover:shadow-indigo-500/10
+              "
                         >
                             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-1">
                                 {item.title}
                             </h3>
-                            <p className="text-sm text-slate-600 dark:text-slate-400 ">
+                            <p className="text-sm text-slate-600 dark:text-slate-400">
                                 {item.desc}
                             </p>
                         </div>

@@ -2,15 +2,26 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
     return (
-        <section className="py-32 px-6 bg-slate-50 dark:bg-slate-950 transition-colors duration-500">
+        <section
+            className="
+        min-h-screen
+        flex items-center
+        px-6
+        bg-transparent
+      "
+        >
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="max-w-4xl mx-auto text-center space-y-12"
+                className="
+          max-w-4xl mx-auto w-full
+          py-20 md:py-28
+          text-center
+          space-y-12
+        "
             >
-                {/* Heading */}
                 <div>
                     <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 mb-4">
                         Let’s Build Something Meaningful
@@ -22,23 +33,23 @@ export default function Contact() {
                     </p>
                 </div>
 
-                {/* Contact Card */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1, duration: 0.6, ease: "easeOut" }}
                     viewport={{ once: true }}
                     className="
-                        mx-auto max-w-2xl
-                        rounded-2xl
-                        border border-slate-200 dark:border-slate-800
-                        bg-white dark:bg-slate-900
-                        p-8
-                        space-y-5
-                        shadow-sm
-                        transition-all duration-300
-                        hover:shadow-md hover:shadow-indigo-500/10
-                    "
+            mx-auto max-w-2xl
+            rounded-2xl
+            border border-slate-200 dark:border-slate-800
+            bg-slate-50/80 dark:bg-slate-900/80
+            backdrop-blur
+            p-8
+            space-y-5
+            shadow-sm
+            transition-all duration-300
+            hover:shadow-md hover:shadow-indigo-500/10
+          "
                 >
                     <p className="text-slate-700 dark:text-slate-300">
                         <span className="font-semibold text-slate-900 dark:text-slate-100">
@@ -60,11 +71,7 @@ export default function Contact() {
                         </span>{" "}
                         <a
                             href="mailto:meghbheru71@gmail.com"
-                            className="
-                                text-indigo-600 dark:text-indigo-400
-                                hover:underline
-                                transition-colors duration-200
-                            "
+                            className="text-indigo-600 dark:text-indigo-400 hover:underline transition-colors duration-200"
                         >
                             meghbheru71@gmail.com
                         </a>
@@ -80,7 +87,6 @@ export default function Contact() {
                     </p>
                 </motion.div>
 
-                {/* Closing Line */}
                 <motion.p
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}

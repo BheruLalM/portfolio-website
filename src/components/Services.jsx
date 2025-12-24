@@ -2,15 +2,25 @@ import { motion } from "framer-motion";
 
 export default function Services() {
     return (
-        <section className="py-28 px-6 bg-slate-50 dark:bg-slate-900 transition-colors duration-500">
+        <section
+            className="
+        min-h-screen
+        flex items-center
+        px-6
+        bg-transparent
+      "
+        >
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="max-w-4xl mx-auto space-y-12"
+                className="
+          max-w-4xl mx-auto w-full
+          py-20 md:py-28
+          space-y-12
+        "
             >
-                {/* Heading */}
                 <div>
                     <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 mb-3">
                         What I Do
@@ -21,7 +31,6 @@ export default function Services() {
                     </p>
                 </div>
 
-                {/* Core Services */}
                 <ul className="space-y-4">
                     {[
                         {
@@ -52,14 +61,15 @@ export default function Services() {
                             }}
                             viewport={{ once: true }}
                             className="
-                                bg-white dark:bg-slate-800
-                                border border-slate-200 dark:border-slate-700
-                                rounded-xl px-6 py-5
-                                shadow-sm
-                                transition-all duration-300
-                                hover:-translate-y-1
-                                hover:shadow-md hover:shadow-indigo-500/10
-                            "
+                border border-slate-200 dark:border-slate-700
+                bg-slate-50/80 dark:bg-slate-900/80
+                backdrop-blur
+                rounded-xl px-6 py-5
+                shadow-sm
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:shadow-md hover:shadow-indigo-500/10
+              "
                         >
                             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-1">
                                 {item.title}
@@ -71,18 +81,18 @@ export default function Services() {
                     ))}
                 </ul>
 
-                {/* Process Summary */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
                     viewport={{ once: true }}
                     className="
-                        rounded-2xl
-                        border border-indigo-200 dark:border-indigo-500/20
-                        bg-indigo-50 dark:bg-indigo-500/10
-                        px-6 py-5
-                    "
+            rounded-2xl
+            border border-indigo-200 dark:border-indigo-500/20
+            bg-indigo-50/80 dark:bg-indigo-500/10
+            backdrop-blur
+            px-6 py-5
+          "
                 >
                     <p className="text-slate-700 dark:text-slate-300 font-medium">
                         My approach is simple:
@@ -93,7 +103,6 @@ export default function Services() {
                     </p>
                 </motion.div>
 
-                {/* Closing Line */}
                 <p className="font-medium text-indigo-600 dark:text-indigo-400">
                     From design thinking to a fully working product — I handle the journey.
                 </p>
