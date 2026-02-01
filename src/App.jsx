@@ -7,6 +7,7 @@ import CV from "./components/Cv";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot";
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
         </Routes>
       </div>
 
+      <Chatbot />
       <Footer />
     </main>
   );
