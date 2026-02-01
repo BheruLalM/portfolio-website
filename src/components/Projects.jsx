@@ -92,13 +92,21 @@ export default function Projects() {
                                     href={p.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1"
+                                    className="
+                                        inline-flex items-center justify-center
+                                        px-5 py-2.5 rounded-xl
+                                        bg-indigo-600 dark:bg-indigo-500
+                                        text-white text-sm font-semibold
+                                        shadow-lg shadow-indigo-500/20
+                                        hover:-translate-y-0.5 transition-all duration-300
+                                        w-fit
+                                    "
                                 >
-                                    👉 Live Project: {p.name}
+                                    Live Project: {p.name}
                                 </a>
 
-                                <p className="text-xs text-slate-500 dark:text-slate-400 italic">
-                                    🔧 Adding more features and changes (Project is under active development)
+                                <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                                    Adding more features and changes (Project is under active development)
                                 </p>
 
                                 <div className="flex items-center gap-2 text-sm font-medium text-indigo-600 dark:text-indigo-400">
