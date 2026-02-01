@@ -76,11 +76,11 @@ const Chatbot = () => {
             </style>
             <button
                 onClick={toggleChatbot}
-                className="fixed bottom-5 right-5 z-50 p-4 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer
-                    bg-white dark:bg-slate-800 
-                    text-slate-900 dark:text-slate-100 
-                    border border-slate-200 dark:border-slate-700 
-                    hover:bg-slate-50 dark:hover:bg-slate-700"
+                className="fixed bottom-5 right-5 z-50 p-4 rounded-full shadow-xl transition-all duration-300 flex items-center justify-center cursor-pointer
+                    bg-indigo-600 dark:bg-indigo-600 
+                    text-white 
+                    hover:bg-indigo-700 dark:hover:bg-indigo-500
+                    hover:scale-105"
                 aria-label="Toggle Chatbot"
             >
                 <svg
