@@ -72,15 +72,31 @@ const Chatbot = () => {
           #chatbase-bubble-button {
             display: none !important;
           }
+          
+          @media (max-width: 768px) {
+            #chatbase-bubble-window {
+              position: fixed !important;
+              bottom: 80px !important; /* Above the toggle button */
+              right: 16px !important;
+              width: 90vw !important;
+              max-width: 350px !important;
+              height: 500px !important;
+              max-height: 70vh !important;
+              left: auto !important;
+              top: auto !important;
+              border-radius: 16px !important;
+              box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+            }
+          }
         `}
             </style>
             <button
                 onClick={toggleChatbot}
-                className="fixed bottom-5 right-5 z-50 p-4 rounded-full shadow-xl transition-all duration-300 flex items-center justify-center cursor-pointer
+                className="fixed bottom-4 right-4 md:bottom-5 md:right-5 z-50 p-3 md:p-4 rounded-full shadow-xl transition-all duration-300 flex items-center justify-center cursor-pointer
                     bg-indigo-600 dark:bg-indigo-600 
                     text-white 
                     hover:bg-indigo-700 dark:hover:bg-indigo-500
-                    hover:scale-105"
+                    hover:scale-105 active:scale-95"
                 aria-label="Toggle Chatbot"
             >
                 <svg
