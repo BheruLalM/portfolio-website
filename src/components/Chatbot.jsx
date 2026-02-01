@@ -1,12 +1,26 @@
 import { useEffect, useState } from "react";
+import useTheme from "../hooks/useTheme";
 
 const Chatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
 
+    const { theme } = useTheme();
+
     useEffect(() => {
         // Check if script is already added to avoid duplicates
         const scriptId = "BDLpqfja5rEScRaMfA2rE";
-        if (document.getElementById(scriptId)) return;
+        const existingScript = document.getElementById(scriptId);
+
+        // If script exists, we might need to remove it to re-initialize with new theme
+        // However, frequent removing/adding might be jarring.
+        // Let's try to append the theme to the src.
+
+        if (existingScript) {
+            existingScript.remove();
+            // Also remove the Chatbase iframe if it exists to force reload
+            const iframe = document.getElementById("chatbase-bubble-window");
+            if (iframe) iframe.remove();
+        }
 
         (function () {
             if (!window.chatbase || window.chatbase("getState") !== "initialized") {
@@ -38,7 +52,7 @@ const Chatbot = () => {
                 window.addEventListener("load", onLoad);
             }
         })();
-    }, []);
+    }, [theme]);
 
     const toggleChatbot = () => {
         if (!window.chatbase) return;
@@ -62,7 +76,11 @@ const Chatbot = () => {
             </style>
             <button
                 onClick={toggleChatbot}
-                className="fixed bottom-5 right-5 z-50 p-4 bg-black text-white rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300 flex items-center justify-center cursor-pointer"
+                className="fixed bottom-5 right-5 z-50 p-4 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer
+                    bg-white dark:bg-slate-800 
+                    text-slate-900 dark:text-slate-100 
+                    border border-slate-200 dark:border-slate-700 
+                    hover:bg-slate-50 dark:hover:bg-slate-700"
                 aria-label="Toggle Chatbot"
             >
                 <svg
