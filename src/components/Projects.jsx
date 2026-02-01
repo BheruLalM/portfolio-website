@@ -5,11 +5,13 @@ const projects = [
         name: "EduStore",
         date: "In Progress",
         desc: "An educational platform designed around scalable backend architecture, role-based access, and structured learning resource management.",
+        link: "https://edustore-omega.vercel.app",
     },
     {
         name: "FilmiWorld",
         date: "In Progress",
         desc: "A movie and entertainment discovery platform focused on metadata modeling, search, and a smooth, streaming-inspired user experience.",
+        link: "https://filmiworld-frontend-uogs.vercel.app",
     },
 ];
 
@@ -83,16 +85,29 @@ export default function Projects() {
 
                             <div
                                 className="
-                  mt-6 flex items-center gap-2
-                  text-sm font-medium
-                  text-indigo-600 dark:text-indigo-400
+                  mt-6 flex flex-col gap-4
                 "
                             >
-                                <span className="relative flex h-2 w-2">
-                                    <span className="absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75 animate-ping"></span>
-                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
-                                </span>
-                                Actively Building
+                                <a
+                                    href={p.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1"
+                                >
+                                    👉 Live Project: {p.name}
+                                </a>
+
+                                <p className="text-xs text-slate-500 dark:text-slate-400 italic">
+                                    🔧 Adding more features and changes (Project is under active development)
+                                </p>
+
+                                <div className="flex items-center gap-2 text-sm font-medium text-indigo-600 dark:text-indigo-400">
+                                    <span className="relative flex h-2 w-2">
+                                        <span className="absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75 animate-ping"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
+                                    </span>
+                                    Actively Building
+                                </div>
                             </div>
                         </motion.div>
                     ))}
